@@ -1,11 +1,16 @@
-<div class="p-5 border border-black rounded text-white productCardBox h-100">
-   <div class="fw-bold  fs-5">
-       {{product['title']}}
-   </div>
-   <div class="description">
-      {{product['description']}}
-   </div>
-   <div class="rupee">
-    &#8377; {{product['price']}}
-   </div>
+<div class="border border-black rounded text-white productCardBox h-100 cursor-pointer">
+  
+<div class="imageContainer w-100 text-center">
+     <img [src]="product['images'][0]" height="100%"/>
+</div>
+
+ <div class="p-2">
+    <div class="fw-bold productName">
+        {{product['title']}}
+    </div>
+    <div class="rupee">
+     &#8377; {{product['price']}}
+    </div>
+ </div>
+
 </div>

@@ -7,5 +7,25 @@
     font-weight: 600;
 }
 .productCardBox {
-    background-color : rgb(70, 70, 70)
+    background-color : rgb(70, 70, 70);
+    cursor:pointer
+}
+.productCardBox {
+    background-color: rgb(70, 70, 70);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.productCardBox:hover {
+    background-color: rgb(100, 100, 100); /* Lighten background */
+    color: #ffcc00; /* Change text color */
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+.imageContainer {
+    height: 150px;
+}
+.productName {
+    font-size: 18px;
 }
