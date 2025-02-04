@@ -1,0 +1,47 @@
+<div class="container" *ngIf="!loading">
+    <h1>{{ product['title'] }}</h1>
+    <img [src]="product['thumbnail']" alt="Product Image" class="product-image" />
+    <p><strong>Description:</strong> {{ product['description'] }}</p>
+    <p><strong>Category:</strong> {{ product['category'] }}</p>
+    <p><strong>Price:</strong> ${{ product['price'] }}</p>
+    <p><strong>Discount:</strong> {{ product['discountPercentage'] }}%</p>
+    <p><strong>Rating:</strong> ⭐ {{ product['rating'] }}</p>
+    <p><strong>Stock:</strong> {{ product['stock'] }}</p>
+    <p><strong>Brand:</strong> {{ product['brand'] }}</p>
+    <p><strong>SKU:</strong> {{ product['sku'] }}</p>
+  
+    <h3>Dimensions:</h3>
+    <p>Width: {{ product['dimensions']?.width }} cm</p>
+    <p>Height: {{ product['dimensions']?.height }} cm</p>
+    <p>Depth: {{ product['dimensions']?.depth }} cm</p>
+  
+    <h3>Warranty & Shipping:</h3>
+    <p><strong>Warranty:</strong> {{ product['warrantyInformation'] }}</p>
+    <p><strong>Shipping:</strong> {{ product['shippingInformation'] }}</p>
+    <p><strong>Availability:</strong> {{ product['availabilityStatus'] }}</p>
+  
+    <h3>Return Policy:</h3>
+    <p>{{ product['returnPolicy'] }}</p>
+  
+    <h3>Tags:</h3>
+    <ul>
+      <li *ngFor="let tag of product['tags']">{{ tag }}</li>
+    </ul>
+  
+    <h3>Reviews:</h3>
+    <div *ngFor="let review of product['reviews']">
+      <p><strong>{{ review['reviewerName'] }}</strong> ({{ review['rating'] }}⭐)</p>
+      <p>{{ review['comment'] }}</p>
+      <hr />
+    </div>
+    <h3>Barcode & QR Code:</h3>
+    <p><strong>Barcode:</strong> {{ product['meta']?.barcode }}</p>
+    <img [src]="product['meta']?.qrCode" alt="QR Code" class="qr-code" />
+  </div>
+
+  <div *ngIf="loading" class="d-flex justify-content-center align-items-center vh-100">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+  

@@ -1,0 +1,36 @@
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .product-image {
+    width: 100%;
+    max-height: 500px;
+    object-fit: fill;
+    border-radius: 5px;
+  }
+  
+  .qr-code {
+    width: 150px;
+    height: 150px;
+  }
+  
+  h1, h3 {
+    color: #333;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    display: inline-block;
+    margin-right: 10px;
+    background-color: #f3f3f3;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
