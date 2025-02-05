@@ -6,12 +6,9 @@
     font-size : 18px ;
     font-weight: 600;
 }
+
 .productCardBox {
-    background-color : rgb(70, 70, 70);
-    cursor:pointer
-}
-.productCardBox {
-    background-color: rgb(70, 70, 70);
+    background-color:rgb(61 39 39);
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
