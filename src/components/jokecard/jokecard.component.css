@@ -1,28 +1,63 @@
-.description{
- font-size: 16px ;
-}
-
-.rupee {
-    font-size : 18px ;
-    font-weight: 600;
-}
-
 .productCardBox {
-    background-color:rgb(61 39 39);
+    background: linear-gradient(135deg, #2c3e50, #4b6584); /* Gradient background */
+    border: 2px solid #3498db; /* Blue border */
+    border-radius: 12px; /* Smooth rounded corners */
+    color: white; /* Text color */
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
 }
 
 .productCardBox:hover {
-    background-color: rgb(100, 100, 100); /* Lighten background */
-    color: #ffcc00; /* Change text color */
-    transform: scale(1.05); 
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow */
+    background: linear-gradient(135deg, #34495e, #6a89cc); /* Hover background */
+    border-color: #dab008; /* Gold border */
+    transform: translateY(-5px) scale(1.05); /* Slight lift */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Shadow effect */
 }
 
 .imageContainer {
-    height: 150px;
+    height: 180px; /* Increased height for better image display */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f8f9fa; /* Light background for contrast */
+    overflow: hidden;
+    border-radius: 11px; /* Smooth rounded corners */
+
 }
+
+.imageContainer img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.p-2 {
+    padding: 15px;
+}
+
 .productName {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffcc00; /* Golden text for luxury feel */
+}
+
+.rupee {
     font-size: 18px;
+    font-weight: 600;
+    color: #f1f1f1; /* Light text for contrast */
+}
+
+.description {
+    font-size: 16px;
+    color: #d1d1d1; /* Soft gray for readability */
+}
+
+/* Smooth Animation for Interaction */
+.productCardBox:hover .productName {
+    color: #ffffff; /* Change text color on hover */
+}
+
+.productCardBox:hover .rupee {
+    color: #ffcc00; /* Highlight price */
 }
